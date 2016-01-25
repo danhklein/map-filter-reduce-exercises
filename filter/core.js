@@ -1,17 +1,28 @@
-function onlyEven (array) {
-  // your code here
+var array = [10,15,20,25,30,35];
+
+function onlyEven (el, index, array) {
+  return !(el%2);
+};
+array.filter(onlyEven);
+
+var array = ['return', 'phrases', 'with one word'];
+function onlyOneWord (el, index, array) {
+  return el.split(" ").length === 1;
 };
 
-function onlyOneWord (array) {
-  // your code here
+array.filter(onlyOneWord);
+
+var matrix = [[1, 10,-100],
+              [2,-20, 200],
+              [3, 30, 300]];
+function positiveRowsOnly (el, index, array) {
+  return el[index][index] > 0;
 };
 
-function positiveRowsOnly (array) {
-  // your code here
-};
+array.filter(positiveRowsOnly);
 
 function allSameVowels (array) {
-  // your code here
+
 };
 
 module.exports = {
